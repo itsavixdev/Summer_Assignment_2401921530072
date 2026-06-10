@@ -1,0 +1,17 @@
+//1. Implement strStr() (leetcode 28)
+class Solution {
+    public int strStr(String haystack, String needle) {
+         if (needle.isEmpty()) {
+            return 0;
+        }
+        int n = haystack.length();
+        int m = needle.length();
+        for (int i = 0; i <= n - m; i++) {
+            if (haystack.substring(i, i + m).equals(needle)) {
+                return i;
+            }
+        }
+        
+        return -1;
+    }
+}
